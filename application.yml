@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active:
+      - dev
+
+---
+
+spring:
+  profiles: dev   # 开发环境
+  application:
+    name: lwohvye-springcloud-config-dev
+
+---
+
+spring:
+  profiles: prod   # 生产环境
+  application:
+    name: lwohvye-springcloud-config-prod
