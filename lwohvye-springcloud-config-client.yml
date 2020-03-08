@@ -17,9 +17,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-    instance:
-      instance-id: lwohvye-spring-cloud-config-client-8201
-        prefer-ip-address: true     #访问路径可以显示IP地址
+  instance:
+    instance-id: lwohvye-spring-cloud-config-client-8201
+    prefer-ip-address: true     #访问路径可以显示IP地址
 ---
 server:
   port: 8202
@@ -33,6 +33,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka7002.com:7002/eureka/
-    instance:
-      instance-id: lwohvye-spring-cloud-config-client-8202
-        prefer-ip-address: true     #访问路
+  instance:
+    instance-id: lwohvye-spring-cloud-config-client-8202
+    prefer-ip-address: true     #访问路
