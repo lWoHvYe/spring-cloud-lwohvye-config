@@ -1,3 +1,9 @@
+spring:
+  profiles:
+    active:
+      - dev
+
+---
 server:
   http2:
     enabled: true
@@ -92,8 +98,7 @@ spring:
   jpa:
     open-in-view: false
     show-sql: true
-  profiles:
-    active: dev
+  profiles: dev
   redis:
     database: 0
     host: 192.168.0.145
