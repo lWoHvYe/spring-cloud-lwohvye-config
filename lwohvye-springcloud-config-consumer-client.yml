@@ -3,6 +3,9 @@ spring:
     active:
       - dev
 
+config:
+  info: "version=2020-01"
+
 ---
 server:
   port: 80
