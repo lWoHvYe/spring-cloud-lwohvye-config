@@ -4,7 +4,7 @@ spring:
       - dev
 
 config:
-  info: "version=2020-01"
+  info: "version=2020-01-update"
 
 ---
 server:
