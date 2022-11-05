@@ -33,12 +33,6 @@ info:
 
 logging:
   config: classpath:logback-spring.xml
-  level:
-    com:
-      lwohvye:
-        springcloud:
-          springcloudlwohvyeprovider:
-            dao: debug
 
 spring:
   application:
@@ -50,3 +44,17 @@ spring:
   jmx:
     enabled: false
     profiles: dev
+    
+  rabbitmq: #rabbitmq相关配置，15672是web管理端口，5672是mq访问端口
+    port: 5672
+    host: 10.211.55.140
+    username: admin
+    password: admin
+
+#暴露监控端点，用于自动更新配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    
