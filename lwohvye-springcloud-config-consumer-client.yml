@@ -15,3 +15,16 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://localhost:7001/eureka/
+
+spring:
+  rabbitmq: #rabbitmq相关配置，15672是web管理端口，5672是mq访问端口
+    port: 5672
+    host: 10.211.55.140
+    username: admin
+    password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
