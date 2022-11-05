@@ -19,7 +19,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      defaultZone: http://localhost:7001/eureka/
   instance:
     instance-id: lwohvye-provider-8084
     prefer-ip-address: true
@@ -40,80 +40,13 @@ logging:
           springcloudlwohvyeprovider:
             dao: debug
 
-mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  master:
-    mapper-locations: classpath:mybatis/mapper/master/*.xml
-  slave:
-    mapper-locations: classpath:mybatis/mapper/slave/*.xml
-  type-aliases-package: com.lwohvye.springcloud.springcloudlwohvyeapi.entity
-
-pagehelper:
-  auto-dialect: true
-  auto-runtime-dialect: true
-  reasonable: true
-  support-methods-arguments: true
-
 spring:
   application:
     name: lwohvye-provider
-  datasource:
-    druid:
-      master:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        initial-size: 5
-        max-active: 20
-        max-pool-prepared-statement-per-connection-size: 20
-        max-wait: 6000
-        min-idle: 5
-        password: root
-        pool-prepared-statements: true
-        test-on-borrow: false
-        test-on-return: false
-        test-while-idle: true
-        url: jdbc:mysql://192.168.0.145:3340/spring_shiro?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
-        username: root
-        validation-query: SELECT 1 FROM DUAL
-        validation-query-timeout: 3000
-      slave:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        initial-size: 5
-        max-active: 20
-        max-pool-prepared-statement-per-connection-size: 20
-        max-wait: 6000
-        min-idle: 5
-        password: root
-        pool-prepared-statements: true
-        test-on-borrow: false
-        test-on-return: false
-        test-while-idle: true
-        url: jdbc:mysql://192.168.0.145:3339/spring_shiro?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
-        username: root
-        validation-query: SELECT 1 FROM DUAL
-        validation-query-timeout: 3000
-    type: com.alibaba.druid.pool.DruidDataSource
   http:
     encoding:
       charset: UTF-8
       enabled: true
   jmx:
     enabled: false
-  jpa:
-    open-in-view: false
-    show-sql: true
-  profiles: dev
-  redis:
-    database: 0
-    host: 192.168.0.145
-    lettuce:
-      pool:
-        max-active: 10
-        max-idle: 8
-        max-wait: -1
-        min-idle: 0
-    password: redis
-    port: 6380
-    timeout: 1000
-
-swagger:
-  enable: true
+    profiles: dev
