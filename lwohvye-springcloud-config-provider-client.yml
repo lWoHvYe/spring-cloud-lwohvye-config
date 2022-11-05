@@ -50,11 +50,4 @@ spring:
     host: 10.211.55.140
     username: admin
     password: admin
-
-#暴露监控端点，用于自动更新配置
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
     
