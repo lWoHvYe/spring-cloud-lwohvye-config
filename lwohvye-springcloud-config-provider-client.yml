@@ -4,7 +4,7 @@ spring:
       - dev
 
 config:
-  info: "version=2022-11-update-merge"
+  info: "version=2022-11-update-2"
 
 ---
 server:
