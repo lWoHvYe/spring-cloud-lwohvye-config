@@ -3,9 +3,6 @@ spring:
     active:
       - dev
 
-config:
-  info: "version=2022-11-06-update-2"
-
 ---
 server:
   port: 80
