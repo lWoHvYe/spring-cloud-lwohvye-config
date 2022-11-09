@@ -1,8 +1,2 @@
-spring:
-  profiles:
-    active:
-      - dev
-      
----
 config:
   info: "version=2022-11-update-4"
