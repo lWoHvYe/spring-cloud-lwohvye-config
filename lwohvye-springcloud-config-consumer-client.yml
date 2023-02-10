@@ -27,13 +27,15 @@ management:
         include: "*"
 
 resilience4j.circuitbreaker:
+#     configs可指定多个，在instances中通过 baseConfig引入
     configs:
+#     default会覆盖默认值，但对声明的instance不生效，需在其中显示指定，对未声明的instance是生效的
         default:
             registerHealthIndicator: true
             slidingWindowSize: 10
-#             default并未作用到声明的instance，未声明的反而有效果，应该是有部分规则还不清楚
     instances:
         swarm:
+            baseConfig: default
             permittedNumberOfCallsInHalfOpenState: 3
             slidingWindowType: COUNT_BASED
             minimumNumberOfCalls: 4
