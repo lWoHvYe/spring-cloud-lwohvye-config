@@ -12,7 +12,9 @@ server:
   port: 8201
 
 spring:
-  profiles: dev
+  config:
+    activate:
+      on-profile: dev
   application:
     name: lwohvye-springcloud-config-client
 
@@ -29,7 +31,9 @@ server:
   port: 8202
 
 spring:
-  profiles: prod
+  config:
+    activate:
+      on-profile: prod
   application:
     name: lwohvye-springcloud-config-client.yml
 
