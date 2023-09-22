@@ -6,13 +6,17 @@ spring:
 ---
 
 spring:
-  profiles: dev   # 开发环境
+  config:
+    activate:
+      on-profile: dev   # 开发环境
   application:
     name: lwohvye-springcloud-config-dev
 
 ---
 
 spring:
-  profiles: prod   # 生产环境
+  config:
+    activate:
+      on-profile: prod   # 生产环境
   application:
     name: lwohvye-springcloud-config-prod
